@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Generador de Carnets</title>
+<meta charset='utf-8' name="Generador de Carnets" content='Generador'/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' />
+<script type='text/javascript' src='js/generar.js'></script>
+<script type='text/javascript' src='js/jspdf.min.js'></script>
+
+</head>
+<body style="color: white; background-color: royalblue ">
+    <div class='container'>
+	
+        <h3>Generador de Carnets</h3>
+        <p>
+            <canvas id='canvas1' width='206' height='326' style='border:1px dotted white'></canvas>
+            <canvas id='canvas2' width='206' height='326' style='border:1px dotted white'></canvas>
+        </p>
+        <p></p>
+        <h4>Ingresar los datos del carnet:</h4>
+        Nombre:
+        <p>
+            <input size="24" style="color: midnightblue" type='text' id='nombrecomp' placeholder='Nombre' required/>
+        </p>
+        Cargo:
+        <p>
+            <input size="24" style="color: midnightblue" type='text' id='cargotrab' placeholder='Cargo'/>
+        </p>
+        Unidad:
+        <p>
+            <input size="24" style="color: midnightblue" type='text' id='unigest' placeholder='Unidad'/>
+        </p>
+        ID:
+        <p>
+            <input size="12" style="color: midnightblue" type='text' id='idnumb' placeholder='Numero ID'/>
+        </p>
+        Foto:
+        <p>
+            <input type='file' id='imagefile' onChange="PreviewImage()"/>
+            <img id="uploadPreview" style="width: 50px; height: 50px" />
+        </p>
+        <h4>Fondos del Carnet:</h4>
+        <p>
+        Frontal:
+            <input type='file' id='imagefbg' onChange="PreviewFBg()"/>
+            <img id="uploadFBg" style="width: 52px; height: 82px"/>
+        </p>
+        <p>
+        Posterior:    
+            <input type='file' id='imagebbg' onChange="PreviewBBg()"/>
+            <img id="uploadBBg" style="width: 52px; height: 82px" />
+        </p>
+        <p>
+            <input type='button' style="color: dodgerblue" id='gen' value='Generar' onClick=gene()></button>
+            <input type='button' style="color: firebrick" id='res' value='Resetear' onClick=rese()--></button>
+            <input type='button' style="color: forestgreen" id='pdf' value='Guardar PDF' onClick=savepdf()--></button>
+        </p>
+    </div>
+    <footer>
+        <div class="container">
+            <small>
+                <p>Aplicacion creada usando HTML5 Canvas y JS <a href="https://github.com/hpardo79/M_IDCard">GitHub M_IDCard</a></p>
+                <p>PDF generados por jsPDF <a href="https://github.com/MrRio/jsPDF">GitHub jsPDF</a></p>
+                <p>MIT License Copyright (c) 2018 Héctor Pardo</p>
+            </small>
+        </div>
+    </footer>
+</body>
+
+</html>
