@@ -1,7 +1,7 @@
 # M_IDCard
 Generador de Carnets
 
-![alt text](https://github.com/hpardo79/M_IDCard/carnet.jpg "Carnet Frontal Final")
+![carnet](https://github.com/hpardo79/M_IDCard/carnet.jpg "Carnet Frontal Final")
 
 # MIT License
 
