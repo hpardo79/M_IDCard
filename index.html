@@ -9,8 +9,8 @@
 <script type='text/javascript' src='js/jspdf.min.js'></script>
 
 </head>
-<body style="color: white; background-color: royalblue ">
-    <div class='container'>
+<body style="background-color: black">
+    <div class='container' style="color: white; background-color: midnightblue">
 	
         <h3>Generador de Carnets</h3>
         <p>
@@ -19,37 +19,46 @@
         </p>
         <p></p>
         <h4>Ingresar los datos del carnet:</h4>
-        Nombre:
+        Nombre Completo:
         <p>
-            <input size="24" style="color: midnightblue" type='text' id='nombrecomp' placeholder='Nombre' required/>
+            <input size="24" style="color: midnightblue" type='text' id='nombrecomp' placeholder='Nombre'/>
         </p>
-        Cargo:
+        Cargo Laboral:
         <p>
             <input size="24" style="color: midnightblue" type='text' id='cargotrab' placeholder='Cargo'/>
         </p>
-        Unidad:
+        Unidad de Gestion:
         <p>
             <input size="24" style="color: midnightblue" type='text' id='unigest' placeholder='Unidad'/>
         </p>
-        ID:
+        ID Cedula:
         <p>
-            <input size="12" style="color: midnightblue" type='text' id='idnumb' placeholder='Numero ID'/>
+            <input size="12" style="color: midnightblue" type='text' id='idced' placeholder='00-000-0000'/>
+        </p>
+        Seguro Social:
+        <p>
+            <input size="12" style="color: midnightblue" type='text' id='segsoc' placeholder='00-000-0000'/>
+        </p>
+        No. Empleado:
+        <p>
+            <input size="6" style="color: midnightblue" type='text' id='emplno' placeholder='00000'/>
+        </p>
+        Tipaje:
+        <p>
+            <input size="2" style="color: midnightblue" type='text' id='tipsang' placeholder='AB'/>
         </p>
         Foto:
-        <p>
-            <input type='file' id='imagefile' onChange="PreviewImage()"/>
-            <img id="uploadPreview" style="width: 50px; height: 50px" />
-        </p>
+            <input type='file' id='imagepicf' onChange="PreviewPF()"/>
+            <img id="uploadPF" style="display: none" />
+        <p></p>
         <h4>Fondos del Carnet:</h4>
         <p>
         Frontal:
             <input type='file' id='imagefbg' onChange="PreviewFBg()"/>
-            <img id="uploadFBg" style="width: 52px; height: 82px"/>
-        </p>
-        <p>
+            <img id="uploadFBg" style="display: none"/>
         Posterior:    
             <input type='file' id='imagebbg' onChange="PreviewBBg()"/>
-            <img id="uploadBBg" style="width: 52px; height: 82px" />
+            <img id="uploadBBg" style="display: none" />
         </p>
         <p>
             <input type='button' style="color: dodgerblue" id='gen' value='Generar' onClick=gene()></button>
@@ -57,15 +66,18 @@
             <input type='button' style="color: forestgreen" id='pdf' value='Guardar PDF' onClick=savepdf()--></button>
         </p>
     </div>
-    <footer>
+
+    <footer class="page-footer font-small">
         <div class="container">
-            <small>
-                <p>Aplicacion creada usando HTML5 Canvas y JS <a href="https://github.com/hpardo79/M_IDCard">GitHub M_IDCard</a></p>
-                <p>PDF generados por jsPDF <a href="https://github.com/MrRio/jsPDF">GitHub jsPDF</a></p>
-                <p>MIT License Copyright (c) 2018 Héctor Pardo</p>
-            </small>
+            <div class="footer-copyright text-center">
+                <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 5% 5%;">
+                Aplicacion creada usando HTML5 Canvas y JS.
+                <p>PDF generados con <a href="https://github.com/MrRio/jsPDF">jsPDF</a></p>   
+                MIT License Copyright © 2018 Héctor Pardo <a href="https://github.com/hpardo79/M_IDCard">M_IDCard</a>
+            </div>
         </div>
     </footer>
+     
 </body>
 
 </html>
