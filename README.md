@@ -1,6 +1,8 @@
 # M_IDCard
 Generador de Carnets
 
+![alt text](https://github.com/hpardo79/M_IDCard/carnet.jpg "Carnet Frontal Final")
+
 # MIT License
 
 Copyright (c) 2018 Héctor Pardo
