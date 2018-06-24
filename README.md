@@ -1,7 +1,7 @@
 # M_IDCard
 ## Generador de Carnets
 Apps creada con HTML Canvas y JS para generar carnets de identificacion personal, funcional para empresas, colegios y otras aplicaciones. No requiere de Servidor...
-![apps](https://github.com/hpardo79/M_IDCard/blob/master/previewapps.jpg "Visualizacion")
+![apps](https://github.com/hpardo79/M_IDCard/blob/master/PreviewApps.png "Visualizacion")
 
 ![carnet](https://github.com/hpardo79/M_IDCard/blob/master/carnet.jpg "Carnet Frontal Final")
 
