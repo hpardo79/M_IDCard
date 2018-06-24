@@ -5,8 +5,11 @@ var ctx2=canvas2.getContext('2d')
 
 function gene(){
 nombrec=document.getElementById('nombrecomp').value
+nombrec2=document.getElementById('nombrecomp2').value
 cargotb=document.getElementById('cargotrab').value
+cargotb2=document.getElementById('cargotrab2').value
 ungest=document.getElementById('unigest').value
+ungest2=document.getElementById('unigest2').value
 idcd=document.getElementById('idced').value
 segsc=document.getElementById('segsoc').value
 empno=document.getElementById('emplno').value
@@ -19,50 +22,67 @@ ctx1.webkitImageSmoothingEnabled = false;
 ctx1.msImageSmoothingEnabled = false;
 ctx1.imageSmoothingEnabled = false;
 
-ctx1.clearRect(0,0,206,326)
+ctx1.clearRect(0,0,412,652)
 
 youfbg=document.getElementById('uploadFBg')
-ctx1.drawImage(youfbg,0,0,206,326)
+ctx1.drawImage(youfbg,0,0,412,652)
 
 youphot=document.getElementById('uploadPF')
-ctx1.drawImage(youphot,43,68,120,130)
+ctx1.drawImage(youphot,86,136,240,260)
 
-ctx1.font='bold 15px Arial'
-ctx1.fillStyle='#ffffff'
+ctx1.font='bold 24px Arial'
+ctx1.fillStyle='#1b5322'
 ctx1.textAlign='center'
-ctx1.fillText(nombrec,103,213)
+ctx1.fillText(nombrec,206,420)
 
-ctx1.font='13px Arial'
-ctx1.fillStyle='#ffffff'
+ctx1.font='bold 24px Arial'
+ctx1.fillStyle='#1b5322'
 ctx1.textAlign='center'
-ctx1.fillText(cargotb,103,233)
+ctx1.fillText(nombrec2,206,440)
 
-ctx1.font='13px Arial'
-ctx1.fillStyle='#ffffff'
+ctx1.font='22px Arial'
+ctx1.fillStyle='#1b5322'
 ctx1.textAlign='center'
-ctx1.fillText(ungest,103,253)
+ctx1.fillText(cargotb,206,460)
 
-ctx1.font='9px Arial'
-ctx1.fillStyle='#ffffff'
-ctx1.textAlign='start'
-ctx1.fillText('Cedula: '+ idcd,10,268)
+ctx1.font='22px Arial'
+ctx1.fillStyle='#1b5322'
+ctx1.textAlign='center'
+ctx1.fillText(cargotb2,206,480)
 
-ctx1.font='9px Arial'
-ctx1.fillStyle='#ffffff'
-ctx1.textAlign='start'
-ctx1.fillText('S. Social: '+ segsc,103,268)
+ctx1.font='bold 22px Arial'
+ctx1.fillStyle='#1b5322'
+ctx1.textAlign='center'
+ctx1.fillText(ungest,206,505)
 
-ctx1.font='9px Arial'
-ctx1.fillStyle='#ffffff'
-ctx1.textAlign='start'
-ctx1.fillText('No. Empleado: '+ empno,10,278)
+ctx1.font='bold 22px Arial'
+ctx1.fillStyle='#1b5322'
+ctx1.textAlign='center'
+ctx1.fillText(ungest2,206,525)
 
-ctx1.font='9px Arial'
-ctx1.fillStyle='#ffffff'
+ctx1.font='18px Arial'
+ctx1.fillStyle='#1b5322'
 ctx1.textAlign='start'
-ctx1.fillText('Tipaje: '+ tipsa,103,278)
+ctx1.fillText('Cedula: '+ idcd,15,545)
+
+ctx1.font='18px Arial'
+ctx1.fillStyle='#1b5322'
+ctx1.textAlign='start'
+ctx1.fillText('S. Social: '+ segsc,210,545)
+
+ctx1.font='18px Arial'
+ctx1.fillStyle='#1b5322'
+ctx1.textAlign='start'
+ctx1.fillText('No. Empleado: '+ empno,15,560)
+
+ctx1.font='18px Arial'
+ctx1.fillStyle='#1b5322'
+ctx1.textAlign='start'
+ctx1.fillText('Tipaje: '+ tipsa,210,560)
 
 init()
+
+savepdf()
 }
 
 function init(){
@@ -73,21 +93,16 @@ ctx2.webkitImageSmoothingEnabled = false;
 ctx2.msImageSmoothingEnabled = false;
 ctx2.imageSmoothingEnabled = false;
 
-ctx2.clearRect(0,0,206,326)
+ctx2.clearRect(0,0,412,652)
 
 youbbg=document.getElementById('uploadBBg')
-ctx2.drawImage(youbbg,0,0,206,326)
+ctx2.drawImage(youbbg,0,0,412,652)
 }
 
 init()
 
 function first(){
-ctx1.clearRect(0,0,206,326)
-ctx2.clearRect(0,0,206,326)
-ctx1.font='20px Arial'
-ctx1.fillStyle='#ffffff'
-ctx1.textAlign ='center'
-ctx1.fillText('Completar Datos',103,160)
+window.location.reload(true);
 }
 
 first()
