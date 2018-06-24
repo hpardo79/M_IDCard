@@ -10,42 +10,45 @@
 
 </head>
 <body style="background-color: black">
-    <div class='container' style="color: white; background-color: midnightblue">
+    <div class='container' style="color: white; background-image: url(bckgrdpg.jpg); background-repeat: no-repeat; background-size: cover">
 	
         <h3>Generador de Carnets</h3>
         <p>
-            <canvas id='canvas1' width='206' height='326' style='border:1px dotted white'></canvas>
-            <canvas id='canvas2' width='206' height='326' style='border:1px dotted white'></canvas>
+            <canvas id='canvas1' width='412' height='652' style='display: none'></canvas>
+            <canvas id='canvas2' width='412' height='652' style='display: none'></canvas>
         </p>
         <p></p>
         <h4>Ingresar los datos del carnet:</h4>
         Nombre Completo:
         <p>
-            <input size="24" style="color: midnightblue" type='text' id='nombrecomp' placeholder='Nombre'/>
+            <input size="24" style="color: midnightblue" type='text' maxlength="22" id='nombrecomp' placeholder='Nombre'/>
+            <input size="24" style="color: midnightblue" type='text' maxlength="22" id='nombrecomp2' placeholder='Linea adicional'/>
         </p>
         Cargo Laboral:
         <p>
-            <input size="24" style="color: midnightblue" type='text' id='cargotrab' placeholder='Cargo'/>
+            <input size="24" style="color: midnightblue" type='text' maxlength="22" id='cargotrab' placeholder='Cargo'/>
+            <input size="24" style="color: midnightblue" type='text' maxlength="22" id='cargotrab2' placeholder='Linea adicional'/>
         </p>
         Unidad de Gestion:
         <p>
-            <input size="24" style="color: midnightblue" type='text' id='unigest' placeholder='Unidad'/>
+            <input size="24" style="color: midnightblue" type='text' maxlength="22" id='unigest' placeholder='Unidad'/>
+            <input size="24" style="color: midnightblue" type='text' maxlength="22" id='unigest2' placeholder='Linea adicional'/>
         </p>
         ID Cedula:
         <p>
-            <input size="12" style="color: midnightblue" type='text' id='idced' placeholder='00-000-0000'/>
+            <input size="12" style="color: midnightblue" type='text' maxlength="12" id='idced' placeholder='00-000-0000'/>
         </p>
         Seguro Social:
         <p>
-            <input size="12" style="color: midnightblue" type='text' id='segsoc' placeholder='00-000-0000'/>
+            <input size="12" style="color: midnightblue" type='text' maxlength="12" id='segsoc' placeholder='00-000-0000'/>
         </p>
         No. Empleado:
         <p>
-            <input size="6" style="color: midnightblue" type='text' id='emplno' placeholder='00000'/>
+            <input size="6" style="color: midnightblue" type='text' maxlength="6" id='emplno' placeholder='00000'/>
         </p>
         Tipaje:
         <p>
-            <input size="2" style="color: midnightblue" type='text' id='tipsang' placeholder='AB'/>
+            <input size="2" style="color: midnightblue" type='text' maxlength="2" id='tipsang' placeholder='AB'/>
         </p>
         Foto:
             <input type='file' id='imagepicf' onChange="PreviewPF()"/>
@@ -61,9 +64,8 @@
             <img id="uploadBBg" style="display: none" />
         </p>
         <p>
-            <input type='button' style="color: dodgerblue" id='gen' value='Generar' onClick=gene()></button>
+            <input type='button' style="color: forestgreen" id='gen' value='Generar' onClick=gene()></button>
             <input type='button' style="color: firebrick" id='res' value='Resetear' onClick=rese()--></button>
-            <input type='button' style="color: forestgreen" id='pdf' value='Guardar PDF' onClick=savepdf()--></button>
         </p>
     </div>
 
